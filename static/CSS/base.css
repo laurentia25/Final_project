@@ -1,5 +1,15 @@
+.menu {
+    margin-left: 950px;
+}
+
 .brand-logo {
     color: #000000;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
-   }
+    font-family: 'Great Vibes', cursive;
+       }
+
+.slide {
+    margin-top: 30px;
+    margin-left: 785px;
+}
