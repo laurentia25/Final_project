@@ -1,5 +1,5 @@
 {% block carousel%}
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="max-width: 600px; max-height: 2300px;">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 600px; height: 500px">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{url_for('static', filename='images/carousel_1_1.jpg')}}" class="d-block w-100" alt="...">
@@ -17,11 +17,11 @@
       <img src="{{url_for('static', filename='images/carousel_1_5.jpg')}}" class="d-block w-100" alt="...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+  <button class="carousel-control-prev control" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <button class="carousel-control-next control" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>

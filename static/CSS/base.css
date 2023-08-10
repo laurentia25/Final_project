@@ -1,15 +1,96 @@
+.background {
+    background: #f2f2f2;
+}
+
 .menu {
-    margin-left: 950px;
+    margin-left: 800px;
+    background: #000000;
+}
+.navbar-nav {
+    color: #000000;
+    font-weight: bold;
 }
 
 .brand-logo {
     color: #000000;
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
        }
+.brand {
+    color: #000000;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    margin-left: 260px;
+    margin-top: -70px;
+    line-height: normal;
+    font-line: none;
+       }
 
-.slide {
-    margin-top: 30px;
-    margin-left: 785px;
+.bratari-container{
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    margin-top: -70px;
+    line-height: normal;
+    font-line: none;
+    margin-left: 650px;
+}
+
+.position {
+    text-align: center;
+}
+.no-underline {
+    text-decoration: none;
+}
+
+.carousel {
+    margin-top: -300px;
+    margin-left: 800px;
+    color: #e6e6e6;
+}
+
+.spaced-top-5 {
+    margin-top: 5em;
+}
+
+.container {
+    margin-top: 150px;
+}
+
+.col {
+    margin-right: 400px;
+}
+
+.heading-title {
+    color: #000000;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: -2px;
+    margin-left: 30px;
+    }
+
+.row {
+    margin-left: 2px;
+    margin-top: 60px;
+}
+
+.btn {
+    margin-top: 40px;
+    margin-left: 150px;
+    color: #ffffff;
+    background: #000000;
+    border: #000000;
+}
+
+.btn:hover {
+    color: #000000;
+    background: #ffffff;
+    border: 3px solid #000000;
 }

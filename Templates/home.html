@@ -1,6 +1,24 @@
 {%extends "base.html"%}
 {% block content %}
-<div>
-    {% include "carousel.html "%}
+<div class="container spaced-top-5">
+    <div>
+        <div >
+            <div>
+            <h1 class="heading-title col">Lăsați-vă inspirați de
+                <span class="row">universul </span></h1></div>
+            <a href="/products" class="no-underline"><div class="brand">Le biZoux</div></a>
+
+            <a href="/products">
+                <button type="button" class="btn btn-primary btn-lg">Deschide universul</button>
+            </a>
+        </div>
+   </div>
 </div>
+<div class="col">
+       {% include "carousel.html "%}
+</div>
+<div>
+    <a href="/products/bratari" title="Bratari" class="bratari-container no-underline"><span class="position">Brățări</span></a>
+</div>
+
 {% endblock %}
