@@ -94,3 +94,26 @@
     background: #ffffff;
     border: 3px solid #000000;
 }
+
+.login-section {
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.btn-login {
+    margin-top: -60px;
+    margin-left: -13px;
+    color: #ffffff;
+    background: #000000;
+    border: #000000;
+    border: 3px solid #000000;
+}
+
+.column {
+    margin-left: -10px;
+}
+
+.center {
+    margin-left: -60px;
+    margin-top: -40px;
+}

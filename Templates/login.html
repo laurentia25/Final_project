@@ -1,0 +1,32 @@
+{%extends "base.html"%}
+{% block content %}
+<div style="width: 600px; height: 500px" class="login-section">
+    <h2>Autentificare</h2>
+    <form action="/login" method="post" name="login" id="login">
+        <div class="form-floating mb-3" >
+          <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div>
+            {% if error%}
+            <div class="alert alert-danger my-4" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+            <div class="row align-items-center">
+                <div >
+                    <button type="submit" class="btn btn-login ">Autentificare</button>
+                    <p class="column">Nu ai cont? <a href="/users/add">Înregistrează-te</a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="center">
+       {% include "carousel.html "%}
+    </div>
+</div>
+{% endblock %}
