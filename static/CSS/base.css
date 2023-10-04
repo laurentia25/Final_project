@@ -6,6 +6,12 @@
     margin-left: 800px;
     background: #000000;
 }
+.dropdown-menu {
+    background: #f2f2f2;
+    }
+.dropdown-item {
+    font-weight: bold;
+}
 .navbar-nav {
     color: #000000;
     font-weight: bold;
@@ -17,6 +23,7 @@
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
        }
+
 .brand {
     color: #000000;
     font-size: 3.5em;
@@ -28,7 +35,7 @@
     font-line: none;
        }
 
-.bratari-container{
+.inele-container {
     color: #000000;
     font-size: 2em;
     font-weight: bold;
@@ -36,12 +43,44 @@
     margin-top: -70px;
     line-height: normal;
     font-line: none;
-    margin-left: 650px;
+    margin-left: 700px;
 }
 
+.bratari-container{
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    margin-top: 200px;
+    line-height: normal;
+    font-line: none;
+    margin-left: 700px;
+}
+.cercei-container{
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    margin-top: -100px;
+    line-height: normal;
+    font-line: none;
+    margin-left: 700px;
+}
+
+.coliere-container{
+    color: #000000;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    margin-top: -100px;
+    line-height: normal;
+    font-line: none;
+    margin-left: 700px;
+}
 .position {
     text-align: center;
 }
+
 .no-underline {
     text-decoration: none;
 }
@@ -76,6 +115,19 @@
     margin-left: 30px;
     }
 
+.card-title {
+    margin-top: -5px;
+    margin-left: 45px;
+}
+.card-title-minimal{
+    margin-top: -5px;
+    margin-left: 20px;
+}
+.prod-price {
+    margin-top: -5px;
+    margin-left: 100px;
+}
+
 .row {
     margin-left: 2px;
     margin-top: 60px;
@@ -87,6 +139,11 @@
     color: #ffffff;
     background: #000000;
     border: #000000;
+}
+
+.prod-btn {
+    margin-top: 2px;
+    margin-left: 75px;
 }
 
 .btn:hover {
@@ -116,4 +173,19 @@
 .center {
     margin-left: -60px;
     margin-top: -40px;
+}
+
+.float-mid{
+    margin-left: 390px;
+}
+.float-middle2 {
+    margin-left: 780px;
+    margin-top: -300px;
+}
+
+.float-end{
+    margin-top: -300px;
+}
+.prod-price{
+    margin-left: 110px;
 }

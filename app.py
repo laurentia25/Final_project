@@ -21,7 +21,7 @@ def login():
     if request.method == "GET":
         return render_template("login.html")
     # logica asociata cu metoda POST, nu e nevoie de else
-    user_data = dict(request.form) #-> dictionar cu info din form
+    user_data = dict(request.form) # -> dictionar cu info din form
     # user_obj = User(email=user_data['email'], password=user_data['password'])
     try:
         user_obj = User(**user_data)
@@ -33,7 +33,7 @@ def login():
 
 @app.route('/products', methods=['GET'])
 def get_all_products():
-    return render_template("products_list.html ")
+    return render_template("bratari.html ")
 
 
 if __name__ == '__main__':
