@@ -15,7 +15,7 @@
 .navbar-nav {
     color: #000000;
     font-weight: bold;
-}
+    }
 
 .brand-logo {
     color: #000000;
@@ -34,7 +34,18 @@
     line-height: normal;
     font-line: none;
        }
-
+.border-top {
+    border-top: 300px solid #000;
+    margin-bottom: -55px;
+}
+.border-bottom{
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
+    margin-top: -50px;
+}
+.space {
+    margin-top: 30px;
+}
 .inele-container {
     color: #000000;
     font-size: 2em;
@@ -45,16 +56,23 @@
     font-line: none;
     margin-left: 700px;
 }
+.space{
+    margin-top: 30px;
+    border-bottom: 2px solid #000;
 
+}
+.margin {
+    margin-top: 10px;
+}
 .bratari-container{
     color: #000000;
     font-size: 2em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-    margin-top: 200px;
+    margin-top: 400px;
     line-height: normal;
     font-line: none;
-    margin-left: 700px;
+    margin-left: 685px;
 }
 .cercei-container{
     color: #000000;
