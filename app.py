@@ -33,7 +33,27 @@ def login():
 
 @app.route('/products', methods=['GET'])
 def get_all_products():
-    return render_template("bratari.html ")
+    return render_template("products.html")
+
+
+@app.route('/products/inele', methods=['GET'])
+def get_inele():
+    return render_template('inele_page.html')
+
+
+@app.route('/products/bratari', methods=['GET'])
+def get_bratari():
+    return render_template('bratari_page.html')
+
+
+@app.route('/products/cercei', methods=['GET'])
+def get_cercei():
+    return render_template('cercei_page.html')
+
+
+@app.route('/products/coliere', methods=['GET'])
+def get_coliere():
+    return render_template('coliere_page.html')
 
 
 if __name__ == '__main__':

@@ -43,8 +43,9 @@
     margin-bottom: 20px;
     margin-top: -50px;
 }
+
 .space {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .inele-container {
     color: #000000;
@@ -56,44 +57,53 @@
     font-line: none;
     margin-left: 700px;
 }
-.space{
+.inele-container2 {
+    color: #000000;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
     margin-top: 30px;
-    border-bottom: 2px solid #000;
-
+    line-height: normal;
+    font-line: none;
+    margin-left: 675px;
 }
+
 .margin {
     margin-top: 10px;
 }
+.top-space {
+    margin-top: 60px;
+}
 .bratari-container{
     color: #000000;
-    font-size: 2em;
+    font-size: 3.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-    margin-top: 400px;
+    margin-top: 120px;
     line-height: normal;
     font-line: none;
-    margin-left: 685px;
+    margin-left: 660px;
 }
 .cercei-container{
     color: #000000;
-    font-size: 2em;
+    font-size: 3.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
     margin-top: -100px;
     line-height: normal;
     font-line: none;
-    margin-left: 700px;
+    margin-left: 670px;
 }
 
 .coliere-container{
     color: #000000;
-    font-size: 2em;
+    font-size: 3.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
     margin-top: -100px;
     line-height: normal;
     font-line: none;
-    margin-left: 700px;
+    margin-left: 665px;
 }
 .position {
     text-align: center;
