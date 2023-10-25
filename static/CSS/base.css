@@ -185,6 +185,19 @@
     margin-left: 80px;
 }
 
+.up{
+    position: relative;
+    top: -110px;
+}
+
+.align{
+    margin-top: -50px;
+    }
+.signup-section {
+    margin-top: 150px;
+    margin-left: 80px;
+}
+
 .btn-login {
     margin-top: -60px;
     margin-left: -13px;
@@ -201,6 +214,11 @@
 .center {
     margin-left: -60px;
     margin-top: -40px;
+}
+
+.center2 {
+    margin-left: -100px;
+    margin-top: -200px;
 }
 
 .float-mid{

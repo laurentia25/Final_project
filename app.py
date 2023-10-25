@@ -31,6 +31,24 @@ def login():
     return redirect('/products')
 
 
+# @app.route("/users", method=["GET"])
+# def get_all_users():
+#     return render_template("sign_up.html")
+
+
+@app.route("/users/add", methods=["GET", "POST"])
+def add_user():
+    if request.method == "GET":
+        return render_template('sign_up.html')
+    user_data = dict(request.form)
+    try:
+        user_obj = User(**user_data)
+        user_obj.add()
+    except Exception as error:
+        return render_template("sign_up.html", error=f'{error}')
+    return redirect('/products')
+
+
 @app.route('/products', methods=['GET'])
 def get_all_products():
     return render_template("products.html")
@@ -58,4 +76,4 @@ def get_coliere():
 
 if __name__ == '__main__':
     create_database()
-    app.run(debug=True, port=7000)
+    # app.run(debug=True, port=7000)

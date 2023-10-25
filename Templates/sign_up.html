@@ -1,0 +1,47 @@
+{%extends "base.html"%}
+{% block content %}
+<div style="width: 600px; height: 500px" class="signup-section">
+    <div class="large-12 columns">
+        <h2>Înregistrare</h2>
+    <form class="col-6" action="/users/add" method="post" name="registration" id="registration">
+    <div class="row mb-3">
+        <div class="align">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" id="username" class="form-control" aria-describedby="emailHelp">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="">
+            <label for="confirm_password" class="form-label">Confirm Password</label>
+            <input type="password" name="confirm_password" id="confirm_password" class="form-control">
+        </div>
+    </div>
+    {% if error %}
+    <div class="alert alert-danger my-4" role="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+    <div class="row align-items-center">
+        <div class="col">
+            <button type="submit" class="btn btn-primary">Înregistrare</button>
+        </div>
+    </div>
+</form>
+        <div class="center2 up">
+           {% include "carousel.html "%}
+        </div>
+    </div>
+</div>
+{% endblock %}

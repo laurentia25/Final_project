@@ -2,10 +2,19 @@ from db.CRUD.interface_CRUD import CrudABC
 
 
 class UsersDb(CrudABC):
-    def create(self):
-        pass
+    def create(self, user_details):
+        sql_query = """
+        INSERT INTO Users(id, username, password, email)
+        VALUES(:id, :username, :password, :email);
+        """
+        cursor = self.connection.cursor()
+        cursor.execute(
+            sql_query,
+            user_details
+        )
+        self.connection.commit()
 
-    def read(self, email):
+    def read(self, email=None, username=None):
         read_query = """
         SELECT * FROM Users
         WHERE email = ?;
