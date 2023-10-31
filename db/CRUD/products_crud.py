@@ -29,9 +29,8 @@ class ProductsDb(CrudABC):
                     "name": product[0],
                     "description": product[1],
                     "price": product[2],
-                    "weight": product[3],
-                    "available_quantity": product[4],
-                    "image":product[5]
+                    "available_quantity": product[3],
+                    "image":product[4]
                 }
             )
         return products_json
@@ -57,13 +56,12 @@ class ProductsDb(CrudABC):
                         product['name'],
                         product["description"],
                         product['price'],
-                        product['weight'],
                         product['available_quantity'],
                         product['image']
                     ) for product in products]
                 query = """
-                INSERT INTO Products (name, description, price, weight, available_quantity, image)
-                VALUES (?, ?, ?, ?, ?, ?);
+                INSERT INTO Products (name, description, price, available_quantity, image)
+                VALUES (?, ?, ?, ?, ?);
                 """
                 cursor.executemany(query, table_data)
                 self.connection.commit()
