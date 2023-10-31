@@ -5,6 +5,7 @@ dezvoltata folosind framework-ul Flask
 
 from flask import Flask, render_template, request, redirect
 
+from db.CRUD.products_crud import ProductsDb
 from db.db_connection import create_database
 from models.user import User
 
@@ -76,4 +77,6 @@ def get_coliere():
 
 if __name__ == '__main__':
     create_database()
-    # app.run(debug=True, port=7000)
+    products_crud = ProductsDb()
+    products_crud.setup_products('./db/products_setup.json')
+    app.run(debug=True, port=7000)

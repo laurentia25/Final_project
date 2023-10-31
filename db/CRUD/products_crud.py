@@ -14,3 +14,6 @@ class ProductsDb(CrudABC):
 
     def delete(self):
         pass
+
+    def setup_products(self, source_path):
+        pass
