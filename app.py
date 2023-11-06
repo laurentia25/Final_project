@@ -3,7 +3,7 @@ Entrypoint-ul in aplicatia pentru proiectul final
 dezvoltata folosind framework-ul Flask
 """
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 
 from db.CRUD.products_crud import ProductsDb
 from db.db_connection import create_database
@@ -52,7 +52,9 @@ def add_user():
 
 @app.route('/products', methods=['GET'])
 def get_all_products():
-    return render_template("products.html")
+    products_object = ProductsDb()
+    products = products_object.read()
+    return render_template("products.html", products=products, user=session.get("user", False))
 
 
 @app.route('/products/inele', methods=['GET'])

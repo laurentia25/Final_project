@@ -158,15 +158,25 @@
 
 .row {
     margin-left: 2px;
+    margin-top: 30px;
+}
+.row2 {
     margin-top: 60px;
+    margin-left: 12px;
 }
 
 .btn {
-    margin-top: 40px;
-    margin-left: 150px;
+    margin-top: 10px;
     color: #ffffff;
     background: #000000;
     border: #000000;
+}
+.title {
+    margin-left: 10px;
+}
+
+.btn_submit{
+    ;
 }
 
 .prod-btn {

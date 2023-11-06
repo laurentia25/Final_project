@@ -41,7 +41,7 @@ class User:
         invalid_chars = "!#$%^&*()+=`~/?<>,\\|\"\'|țșăîâÂÎȚȘĂ"
         """
         invalid_chars = "!#$%^&*()+=`~/?<>,\\|\"\'|țșăîâÂÎȚȘĂ"
-        for char in self.password:
+        for char in self.username:
             if char in invalid_chars:
                 raise Exception("Username-ul nu trebuie sa contina caractere invalide!")
 
@@ -52,19 +52,30 @@ class User:
         3. Verificam ca avem cel putin un caracter special (-, /, ?, @ etc)
         special_chars = "!@#$%^&*()-=_+[]{}|;':\"<>,./?\\"
         """
+        special_chars = "!@#$%^&*()-=_+[]{}|;':\"<>,./?\\"
         if len(self.password) < 8:
             raise Exception("Parola trebuie sa aibă minim 8 caractere!")
-        for char in self.password:
-            char.isupper()
+        for character in self.password:
+            character.isupper()
             break
         else:
             raise Exception("Parola trebuie sa aibă cel putin o litera mare!")
-        if self.password.isalnum():
+        for char in self.password:
+            if char in special_chars:
+                break
+        else:
             raise Exception("Parola trebuie sa aibă cel putin un caracter special (-, /, ?, @ etc)")
 
     def check_passwords(self):
         if self.password != self.confirm_password:
             raise Exception("Parolele nu coincid")
+
+    def formatting_input(self):
+        return {
+            'id': str(uuid.uuid4()),
+            'username': self.username,
+            'password': self.password,
+            'email': self.email}
 
     def add(self):
         self.validate_input_request()
@@ -83,11 +94,4 @@ class User:
             raise Exception("Parolă invalidă!")
         return True
 
-    def formatting_input(self):
-        return {
-            'id': str(uuid.uuid4()),
-            'username': self.username,
-            'password': self.password,
-            'email': self.email
-        }
 
