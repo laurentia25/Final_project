@@ -57,6 +57,13 @@ def get_all_products():
     return render_template("products.html", products=products, user=session.get("user", False))
 
 
+@app.route('/products/<product_id>', methods=['GET'])
+def get_product_by_id(product_id):
+    products_object = ProductsDb()
+    products = products_object.read(id=product_id)
+    return render_template("product_zoom.html", products=products[0], user=session.get("user", False))
+
+
 @app.route('/products/inele', methods=['GET'])
 def get_inele():
     return render_template('inele_page.html')

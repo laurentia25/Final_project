@@ -9,7 +9,7 @@ class UsersDb(CrudABC):
         """
         cursor = self.connection.cursor()
         cursor.execute(
-            sql_query,
+            sql_query ,
             user_details
         )
         self.connection.commit()

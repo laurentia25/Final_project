@@ -19,15 +19,29 @@
 </div>
 <div class="border-5 border-bottom space2"></div>
 <div>
-    {% include "inele.html "%}
+    <div class="container">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-6 my-3">
+            <div class="card" style="width: 30rem;">
+                  <img class="card-img-top my-4" src="{{ url_for('static', filename = product.image) }}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="prod-price">Pret {{ product.price }} lei</p>
+                    <a href="/products/{{ product.id }}">
+                        <button class="btn btn-primary prod-btn">Vezi produs</button>
+                    </a>
+                      {% if user %}
+                      <a href="#">
+                          <button> Adauga in cos </button>
+                      </a>
+                      {% endif%}
+                  </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
-<div>
-    {% include "bratari.html "%}
-</div>
-<div>
-    {% include "cercei.html "%}
-</div>
-<div>
-    {% include "coliere.html "%}
+
 </div>
 {% endblock %}

@@ -3,119 +3,136 @@
     "name": "Inel auriu Angel",
     "description": "Inel reglabil din aliaj de culoare aurie",
     "price": 65,
+    "category" : "Inele",
     "available_quantity": 30,
-    "image": "images/inele/expensive_golden_ring.jpg"
+    "image": "images/expensive_golden_ring.jpg"
+  },
+  {
+    "name": "Inel auriu Massive",
+    "description": "Inel din aliaj de culoare aurie",
+    "price": 80,
+    "category" : "Inele",
+    "available_quantity": 30,
+    "image": "images/ring2.jpg"
   },
   {
     "name": "Inel auriu Queen",
     "description": "Inel cu cristale si aliaj de culoare aurie",
     "price": 80,
+    "category" : "Inele",
     "available_quantity": 30,
-    "image": "images/inele/queen_ring.jpg"
-  },
-  {
-    "name": "Inel auriu Queen",
-    "description": "Inel cu cristale si aliaj de culoare aurie",
-    "price": 80,
-    "available_quantity": 30,
-    "image": "images/inele/queen_ring.jpg"
+    "image": "images/queen_ring.jpg"
   },
   {
     "name": "Inel auriu Smarald",
     "description": "Inel cu cristale verzi si aliaj de culoare aurie",
     "price": 75,
+    "category" : "Inele",
     "available_quantity": 30,
-    "image": "images/inele/green_ring1.jpg"
+    "image": "images/green_ring1.jpg, images/green_ring2.jpg"
   },
   {
     "name": "Inel auriu Several",
     "description": "Inel din aliaj de culoare aurie",
     "price": 75,
+    "category" : "Inele",
     "available_quantity": 30,
-    "image": "images/inele/small_rings1.jpg"
+    "image": "images/small_rings1.jpg"
   },
   {
     "name": "Bratara aurie Rose",
     "description": "Bratara din aliaj de culoare aurie cu cristale",
     "price": 70,
+    "category" : "Bratari",
     "available_quantity": 30,
-    "image": "images/bratari/carousel_1_3.jpg"
+    "image": "images/carousel_1_3.jpg"
   },
   {
    "name": "Bratara aurie Minimal",
     "description": "Bratara din aliaj de culoare aurie",
     "price": 80,
+    "category" : "Bratari",
     "available_quantity": 30,
-    "image": "images/bratari/bratara4.jpg"
+    "image": "images/bratara4.jpg"
   },
   {
     "name": "Bratara aurie Gold",
     "description": "Bratara din aliaj de culoare aurie",
     "price": 75,
+    "category" : "Bratari",
     "available_quantity": 30,
-    "image": "images/bratari/bratara2.jpg"
+    "image": "images/bratara2.jpg"
   },
   {
     "name": "Bratara aurie Chic",
     "description": "Bratara din aliaj de culoare aurie",
     "price": 75,
+    "category" : "Bratari",
     "available_quantity": 30,
-    "image": "images/bratari/bratara3.jpg"
+    "image": "images/bratara3.jpg"
   },
   {
     "name": "Cercei aurii Pearl",
     "description": "Cercei din aliaj de culoare aurie cu perlute",
     "price": 65,
+    "category" : "Cercei",
     "available_quantity": 30,
-    "image": "images/cercei/cercei1.jpg"
+    "image": "images/cercei1.jpg"
   },
   {
     "name": "Cercei aurii Color",
     "description": "Cercei din aliaj de culoare aurie cu pietricele colorate",
     "price": 80,
+    "category" : "Cercei",
     "available_quantity": 30,
-    "image": "images/cercei/cercei2.jpg"
+    "image": "images/cercei2.jpg"
   },
   {
     "name": "Cercei aurii Gold",
     "description": "Cercei din aliaj de culoare aurie",
     "price": 75,
+    "category" : "Cercei",
     "available_quantity": 30,
-    "image": "images/cercei/cercei3.jpg"
+    "image": "images/cercei3.jpg"
   },
   {
     "name": "Cercei aurii Drop",
     "description": "Cercei din aliaj de culoare aurie cu detaliu transparent",
     "price": 75,
+    "category" : "Cercei",
     "available_quantity": 30,
-    "image": "images/cercei/cercei4.jpg"
+    "image": "images/cercei4.jpg"
   },
   {
     "name": "Colier Elegance",
     "description": "Colier din aliaj de culoare aurie cu pandantiv",
     "price": 65,
+    "category" : "Cercei",
     "available_quantity": 30,
-    "image": "images/coliere/carousel_1_1.jpg"
+    "image": "images/carousel_1_1.jpg"
   },
   {
     "name": "Colier Infinite",
     "description": "Colier transparent cu pandantiv cu cristale",
     "price": 80,
+    "category" : "Colier",
     "available_quantity": 30,
-    "image": "images/coliere/carousel_1_2.jpg"
+    "image": "images/carousel_1_2.jpg"
   },
   {
     "name": "Colier Smarald",
     "description": "Colier din aliaj de culoare aurie",
     "price": 75,
+    "category" : "Colier",
     "available_quantity": 30,
-    "image": "images/coliere/coliere3.jpg"
+    "image": "images/coliere3.jpg"
   },
   {
     "name": "Colier Several",
     "description": "Colier din aliaj de culoare aurie cu pandantiv",
     "price": 75,
+    "category" : "Colier",
     "available_quantity": 30,
-    "image": "images/coliere/coliere5.jpg"
+    "image": "images/coliere5.jpg"
   }
 ]

@@ -11,19 +11,19 @@ def get_db_connection(db_path=DB_PATH):
     return connection
 
 
+def create_tables(connection):
+    create_users_table(connection)
+    create_products_table(connection)
+    create_orders_table(connection)
+    create_order_items_table(connection)
+
+
 # Crearea bazei de date si a tabelelor
 def create_database(db_path=DB_PATH):
     # creare baza de date
     connection = sqlite3.connect(db_path)
     # creare tabele
     create_tables(connection)
-
-
-def create_tables(connection):
-    create_users_table(connection)
-    create_products_table(connection)
-    create_orders_table(connection)
-    create_order_items_table(connection)
 
 
 def create_users_table(connection):
@@ -49,7 +49,7 @@ def create_products_table(connection):
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
         price REAL NOT NULL,
-        description TEXT NOT NULL,
+        category TEXT NOT NULL,
         available_quantity INTEGER NOT NULL DEFAULT 0,
         image TEXT        
         );

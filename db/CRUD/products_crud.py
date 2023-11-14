@@ -26,11 +26,12 @@ class ProductsDb(CrudABC):
         for product in products:
             products_json.append(
                 {
-                    "name": product[0],
-                    "description": product[1],
+                    "id": product[0],
+                    "name": product[1],
                     "price": product[2],
-                    "available_quantity": product[3],
-                    "image":product[4]
+                    "description": product[3],
+                    "available_quantity": product[4],
+                    "image": product[5]
                 }
             )
         return products_json

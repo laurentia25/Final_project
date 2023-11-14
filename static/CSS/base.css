@@ -114,7 +114,7 @@
 }
 
 .carousel {
-    margin-top: -300px;
+    margin-top: -240px;
     margin-left: 800px;
     color: #e6e6e6;
 }
@@ -166,11 +166,15 @@
 }
 
 .btn {
-    margin-top: 10px;
+    margin-top: 80px;
+    margin-left: 125px;
     color: #ffffff;
     background: #000000;
     border: #000000;
 }
+
+
+
 .title {
     margin-left: 10px;
 }
