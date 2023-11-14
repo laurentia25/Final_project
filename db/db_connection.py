@@ -49,7 +49,7 @@ def create_products_table(connection):
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
         price REAL NOT NULL,
-        category TEXT NOT NULL,
+        description TEXT NOT NULL,
         available_quantity INTEGER NOT NULL DEFAULT 0,
         image TEXT        
         );
