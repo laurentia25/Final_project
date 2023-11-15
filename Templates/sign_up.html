@@ -3,27 +3,27 @@
 <div style="width: 600px; height: 500px" class="signup-section">
     <div class="large-12 columns">
     <h2 class="title">Înregistrare</h2>
-        <form class="col-6" action="/users/add" method="post" name="registration" id="registration">
-            <div class="row2">
-                <div class="align">
+        <form class="form-floating mb-3" action="/users/add" method="post" name="registration" id="registration">
+            <div class="form-floating mb-3">
+                <div class="form-floating">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" name="username" id="username" class="form-control" aria-describedby="usernameHelp">
                 </div>
             </div>
-            <div class="row">
-                <div class="">
+            <div class="form-floating mb-3">
+                <div class="form-floating">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp">
                 </div>
             </div>
-            <div class="row ">
-                <div class="">
+            <div class="form-floating mb-3 ">
+                <div class="form-floating">
                     <label for="password" class="form-label">Password</label>
                     <input type="password" name="password" id="password" class="form-control" aria-describedby="passwordHelp">
                 </div>
             </div>
-            <div class="row">
-                <div class="">
+            <div class="form-floating mb-3">
+                <div class="form-floating">
                     <label for="confirm_password" class="form-label">Confirm Password</label>
                     <input type="password" name="confirm_password" id="confirm_password" class="form-control" aria-describedby="passwordHelp">
                 </div>
@@ -42,5 +42,8 @@
             </div>
         </form>
     </div>
+    <div class="center2">
+       {% include "carousel.html "%}
+</div>
 </div>
 {% endblock %}

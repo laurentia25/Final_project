@@ -173,8 +173,9 @@
     border: #000000;
 }
 
-
-
+.position{
+    margin-top:15px;
+}
 .title {
     margin-left: 10px;
 }
@@ -195,9 +196,10 @@
 }
 
 .login-section {
-    margin-top: 100px;
+    margin-top: 200px;
     margin-left: 80px;
 }
+
 
 .up{
     position: relative;
@@ -213,7 +215,7 @@
 }
 
 .btn-login {
-    margin-top: -60px;
+    margin-top: -15px;
     margin-left: -13px;
     color: #ffffff;
     background: #000000;
@@ -223,16 +225,20 @@
 
 .column {
     margin-left: -10px;
+    margin-top: 10px;
 }
 
 .center {
     margin-left: -60px;
-    margin-top: -40px;
+    margin-top: -560px;
 }
 
+.move-up{
+    margin-top:-15px;
+}
 .center2 {
     margin-left: -100px;
-    margin-top: -200px;
+    margin-top: -500px;
 }
 
 .float-mid{
