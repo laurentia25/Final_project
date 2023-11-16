@@ -23,7 +23,9 @@
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
        }
-
+.heading-title2{
+    margin-top: 10px;
+}
 .brand {
     color: #000000;
     font-size: 3.5em;
@@ -124,11 +126,12 @@
 }
 
 .container {
-    margin-top: 150px;
+    margin-top: 230px;
 }
 
 .col {
     margin-right: 400px;
+    margin-top: -40px;
 }
 
 .heading-title {
@@ -213,6 +216,17 @@
     margin-top: 150px;
     margin-left: 80px;
 }
+.btn-lg{
+    margin-top:-15px;
+    margin-left: -14px;
+}
+.btn-prod{
+    margin-top:15px;
+    margin-left: 54px;
+}
+.motto{
+    margin-top: 60px;
+}
 
 .btn-login {
     margin-top: -15px;
@@ -238,7 +252,7 @@
 }
 .center2 {
     margin-left: -100px;
-    margin-top: -500px;
+    margin-top: -410px;
 }
 
 .float-mid{
