@@ -132,7 +132,6 @@
 
 .col {
     margin-right: 400px;
-    margin-top: -100px;
     }
 
 
@@ -149,6 +148,7 @@
     line-height: 1em;
     letter-spacing: -2px;
     margin-left: 30px;
+    margin-top: 190px;
     }
 .card{
     margin-left: -10px;
