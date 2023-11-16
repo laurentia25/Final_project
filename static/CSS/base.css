@@ -38,7 +38,7 @@
        }
 .border-top {
     border-top: 300px solid #000;
-    margin-bottom: -55px;
+    margin-bottom: -40px;
 }
 .border-bottom{
     border-bottom: 2px solid #000;
@@ -111,6 +111,7 @@
     text-align: center;
 }
 
+
 .no-underline {
     text-decoration: none;
 }
@@ -131,9 +132,13 @@
 
 .col {
     margin-right: 400px;
-    margin-top: -40px;
-}
+    margin-top: -100px;
+    }
 
+
+.align{
+    margin-top: -100px;
+}
 .heading-title {
     color: #000000;
     font-size: 50px;
@@ -210,8 +215,9 @@
 }
 
 .align{
-    margin-top: -50px;
+    margin-top: -6px;
     }
+
 .signup-section {
     margin-top: 150px;
     margin-left: 80px;
@@ -222,7 +228,12 @@
 }
 .btn-prod{
     margin-top:15px;
-    margin-left: 54px;
+    margin-left: 84px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    width: 250px;
+    height: 45px;
+    font-size: 1.35rem;
 }
 .motto{
     margin-top: 60px;
