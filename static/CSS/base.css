@@ -31,8 +31,7 @@
     font-size: 3.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-    margin-left: 260px;
-    margin-top: -70px;
+    margin-left: 230px;
     line-height: normal;
     font-line: none;
        }
@@ -42,12 +41,12 @@
 }
 .border-bottom{
     border-bottom: 2px solid #000;
-    margin-bottom: 20px;
-    margin-top: -50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .space {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .inele-container {
     color: #000000;
@@ -76,12 +75,12 @@
 .top-space {
     margin-top: 60px;
 }
-.bratari-container{
+.produse-container{
     color: #000000;
     font-size: 3.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-    margin-top: 120px;
+    margin-top: 160px;
     line-height: normal;
     font-line: none;
     margin-left: 660px;
@@ -109,6 +108,7 @@
 }
 .position {
     text-align: center;
+    margin-left: -90px;
 }
 
 
@@ -161,9 +161,10 @@
     margin-top: -5px;
     margin-left: 20px;
 }
-.prod-price {
-    margin-top: -5px;
-    margin-left: 100px;
+.product-price {
+    margin-top: 5px;
+    position: center;
+    margin-left: 85px;
 }
 
 .row {
