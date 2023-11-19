@@ -1,22 +1,18 @@
 {%extends "base.html"%}
 {% block content %}
     <div class="container">
-    <div class="row">
-        <div class="col-6 my-3">
-            <div class="card" style="width: 30rem;">
-                  <img class="card-img-top my-4" src="{{ url_for('static', filename = product.image) }}">
-                  <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="prod-price">Pret {{ product.price }} lei</p>
-                      {% if user %}
-                      <a href="#">
-                          <button> Adauga in cos </button>
-                      </a>
-                      {% endif%}
-                  </div>
-            </div>
+        <div class="card" style="width= 50px">
+        <img src="{{ url_for('static', filename = products.image) }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ products.name }}</h5>
+            <p class="prod-price">Pret {{ products.price }} lei</p>
+                {% if user %}
+                   <a href="#">
+                   <button> Adauga in cos </button>
+                   </a>
+                {% endif%}
         </div>
-    </div>
+        </div>
 </div>
 
 {% endblock %}

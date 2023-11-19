@@ -57,31 +57,33 @@ def get_all_products():
     return render_template("products.html", products=products, user=session.get("user", False))
 
 
-@app.route('/products/<product_id>', methods=['GET'])
+@app.route('/products/<int:product_id>', methods=['GET'])
 def get_product_by_id(product_id):
     products_object = ProductsDb()
     products = products_object.read(id=product_id)
     return render_template("product_zoom.html", products=products[0], user=session.get("user", False))
 
 
-@app.route('/products/inele', methods=['GET'])
-def get_inele():
-    return render_template('inele_page.html')
+@app.route('/products/<category>', methods=['GET'])
+def get_product_by_category(category):
+    products_object = ProductsDb()
+    products = products_object.read(category=category)
+    return render_template('products.html', products=products, user=session.get("user", False))
 
 
-@app.route('/products/bratari', methods=['GET'])
-def get_bratari():
-    return render_template('bratari_page.html')
+# @app.route('/products/bratari', methods=['GET'])
+# def get_bratari():
+#     return render_template('bratari_page.html')
 
 
-@app.route('/products/cercei', methods=['GET'])
-def get_cercei():
-    return render_template('cercei_page.html')
+# @app.route('/products/cercei', methods=['GET'])
+# def get_cercei():
+#     return render_template('cercei_page.html')
 
 
-@app.route('/products/coliere', methods=['GET'])
-def get_coliere():
-    return render_template('coliere_page.html')
+# @app.route('/products/coliere', methods=['GET'])
+# def get_coliere():
+#     return render_template('coliere_page.html')
 
 
 if __name__ == '__main__':
