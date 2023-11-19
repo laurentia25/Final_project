@@ -31,10 +31,17 @@
     font-size: 3.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-    margin-left: 230px;
+    margin-left: 260px;
     line-height: normal;
     font-line: none;
-       }
+    margin-top: -65px;
+}
+.no-underline {
+    text-decoration: none;
+}
+.btn-align{
+    margin-top: -50px;
+}
 .border-top {
     border-top: 300px solid #000;
     margin-bottom: -40px;
@@ -111,13 +118,8 @@
     margin-left: -90px;
 }
 
-
-.no-underline {
-    text-decoration: none;
-}
-
 .carousel {
-    margin-top: -240px;
+    margin-top: -260px;
     margin-left: 800px;
     color: #e6e6e6;
 }

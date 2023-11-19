@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         {% for product in products %}
-        <div class="col-3 my-3 " width=75px>
+        <div class="col-3 my-3 ">
             <div class="card" style="width: 17rem;">
                   <img class="card-img-top my-4" src="{{ url_for('static', filename = product.image) }}">
                   <div class="card-body">
