@@ -1,18 +1,22 @@
 {%extends "base.html"%}
 {% block content %}
     <div class="container">
-        <div style="width: 60px; height: 50px">
-        <img src="{{ url_for('static', filename = products.image) }}">
-        <div class="card-body">
-            <h5 class="card-title">{{ products.name }}</h5>
-            <p class="prod-price">Pret {{ products.price }} lei</p>
+        <div class="product-align">
+        <img class="product-image" src="{{ url_for('static', filename = products.image) }}">
+        <div class="row body">
+            <div class="">
+            <div class="row card-body text-footer">
+            <h1 class="card-title">{{ products.name }}</h1>
+            <h5 class="product-price">Pret {{ products.price }} lei</h5>
+            <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur distinctio doloremque doloribus dolorum exercitationem, facilis iste itaque laborum molestias nam necessitatibus quas recusandae repudiandae rerum tempore ullam velit? Velit.</p>
                 {% if user %}
                    <a href="#">
                    <button> Adauga in cos </button>
-                   </a>
+                     </a>
                 {% endif%}
+            </div>
         </div>
         </div>
-</div>
-
+        </div>
+    </div>
 {% endblock %}

@@ -71,19 +71,9 @@ def get_product_by_category(category):
     return render_template('products.html', products=products, user=session.get("user", False))
 
 
-# @app.route('/products/bratari', methods=['GET'])
-# def get_bratari():
-#     return render_template('bratari_page.html')
-
-
-# @app.route('/products/cercei', methods=['GET'])
-# def get_cercei():
-#     return render_template('cercei_page.html')
-
-
-# @app.route('/products/coliere', methods=['GET'])
-# def get_coliere():
-#     return render_template('coliere_page.html')
+@app.route('/cart', methods=['GET'])
+def get_checkout():
+    return render_template('cart.html', user=session.get('user', False))
 
 
 if __name__ == '__main__':
