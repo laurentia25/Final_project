@@ -6,26 +6,26 @@
         <form class="form-floating mb-3" action="/users/add" method="post" name="registration" id="registration">
             <div class="form-floating mb-3">
                 <div class="form-floating">
-                    <label for="username" class="form-label">Username</label>
                     <input type="text" name="username" id="username" class="form-control" aria-describedby="usernameHelp">
+                    <label for="username" class="floating-label">Username</label>
                 </div>
             </div>
             <div class="form-floating mb-3">
                 <div class="form-floating">
-                    <label for="email" class="form-label">Email address</label>
                     <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp">
-                </div>
+                    <label for="email" class="floating-label">Email address</label>
+               </div>
             </div>
             <div class="form-floating mb-3 ">
                 <div class="form-floating">
-                    <label for="password" class="form-label">Password</label>
                     <input type="password" name="password" id="password" class="form-control" aria-describedby="passwordHelp">
+                    <label for="password" class="floating-label">Password</label>
                 </div>
             </div>
             <div class="form-floating mb-3">
                 <div class="form-floating">
-                    <label for="confirm_password" class="form-label">Confirm Password</label>
                     <input type="password" name="confirm_password" id="confirm_password" class="form-control" aria-describedby="passwordHelp">
+                    <label for="confirm_password" class="floating-label">Confirm Password</label>
                 </div>
             </div>
             {% if error %}

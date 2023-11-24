@@ -3,7 +3,10 @@ from db.CRUD.products_crud import ProductsDb
 
 class Cart:
 
-    def __init__(self, products_to_cart, product_to_buy):
+    def __init__(self,
+                 products_to_cart=None,
+                 product_to_buy=None
+                 ):
 
         self.products_to_cart = products_to_cart
         self.product_to_buy = product_to_buy

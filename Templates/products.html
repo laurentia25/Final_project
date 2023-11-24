@@ -14,7 +14,7 @@
                     <h6 class="product-price">Pret {{ product.price }} lei</h6>
                       {% if user %}
                       <a href="/cart">
-                          <button class="btn btn-primary cart-btn"> Adauga in cos </button>
+                          <button type="submit" class="btn-primary cart-btn"> Adauga in cos </button>
                       </a>
                       {% else %}
                       <a href="/products/{{ product.id }}">

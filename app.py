@@ -32,9 +32,14 @@ def login():
     return redirect('/products')
 
 
-# @app.route("/users", method=["GET"])
-# def get_all_users():
-#     return render_template("sign_up.html")
+@app.route('/cart', methods=['GET'])
+def get_checkout():
+    return render_template('cart.html', user=session.get('user', False))
+
+
+@app.route("/users")
+def get_all_users():
+    return render_template("sign_up.html")
 
 
 @app.route("/users/add", methods=["GET", "POST"])
@@ -69,11 +74,6 @@ def get_product_by_category(category):
     products_object = ProductsDb()
     products = products_object.read(category=category)
     return render_template('products.html', products=products, user=session.get("user", False))
-
-
-@app.route('/cart', methods=['GET'])
-def get_checkout():
-    return render_template('cart.html', user=session.get('user', False))
 
 
 if __name__ == '__main__':
