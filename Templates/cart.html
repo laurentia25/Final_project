@@ -14,16 +14,45 @@
     <title class="brand-logo">Le biZoux</title>
 </head>
 <body>
- <div class="cart-container">
-  <div>
-    <div class="card-cart" style="width: 15rem;">
-     <img src="..." class="card-img-top" alt="...">
-     </div>
-   <div>
-    <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-   </div>
-  </div>
+{% include "navbar.html" %}
+<div class="small-container cart-page">
+        {% for product in products_in_cart %}
+        <table>
+            <tr>
+                <th>Produs</th>
+                <th>Cantitate</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img class="cart-prod-image"  src="{{ url_for('static', filename = product.image) }}" >
+                        <div class="info">
+                            <h5>{{ product.name }}</h5>
+                            <small>Pret {{ product.price }} lei</small>
+                            <br>
+                            <br>
+                            <a href="">Sterge</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>{{ product.price }} lei</td>
+            </tr>
+        </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>{{ product.price }} lei</td>
+            </tr>
+        </table>
+    </div>
+    {% endfor %}
+    <div class="shopping">
+        <a href="/products">
+            <button class="btn btn-primary prod-btn">Continua cumparaturile</button>
+        </a>
+    </div>
 </div>
- </div>
 </body>

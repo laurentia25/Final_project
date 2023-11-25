@@ -8,19 +8,23 @@
         {% for product in products %}
         <div class="col-3 my-3 ">
             <div class="card" style="width: 17rem;">
+                <a href="/products/{{ product.id }}">
                   <img class="card-img-top my-4" src="{{ url_for('static', filename = product.image) }}">
-                  <div class="card-body">
+                </a>
+                    <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <h6 class="product-price">Pret {{ product.price }} lei</h6>
-                      {% if user %}
-                      <a href="/cart">
-                          <button type="submit" class="btn-primary cart-btn"> Adauga in cos </button>
-                      </a>
-                      {% else %}
-                      <a href="/products/{{ product.id }}">
-                        <button class="btn btn-primary prod-btn">Vezi produs</button>
-                      </a>
-                      {% endif%}
+                     {% if user %}
+                        <form action="/add_to_cart" method="post">
+                            <input type="hidden" name="product_id" value="{{ product.id }}" >
+                          <button type="submit" class="btn btn-primary prod-btn"> Adauga in cos </button>
+                        </form>
+                     {% else %}
+                        <a href="/products/{{ product.id }}">
+                           <button class="btn btn-primary prod-btn">Vezi produs</button>
+                        </a>
+                      {% endif %}
+
 
                   </div>
             </div>

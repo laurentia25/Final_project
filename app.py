@@ -7,6 +7,7 @@ from flask import Flask, render_template, request, redirect, session
 
 from db.CRUD.products_crud import ProductsDb
 from db.db_connection import create_database
+from db.CRUD.cart_CRUD import Cart
 from models.user import User
 
 app = Flask(__name__)
@@ -32,14 +33,17 @@ def login():
     return redirect('/products')
 
 
-@app.route('/cart', methods=['GET'])
-def get_checkout():
-    return render_template('cart.html', user=session.get('user', False))
+@app.route('/add_to_cart', methods=['POST'])
+def add_to_cart():
+    product_id = request.form.get('product_id')
+    prod_buy = Cart()
+    products_in_cart = prod_buy.add_to_cart(product_id)
+    return render_template('cart.html', products_in_cart=products_in_cart, user=session.get("user", True))
 
 
-@app.route("/users")
-def get_all_users():
-    return render_template("sign_up.html")
+# @app.route("/users", methods=['GET'])
+# def get_all_users():
+#     return render_template("sign_up.html", user=session.get('user', True))
 
 
 @app.route("/users/add", methods=["GET", "POST"])
@@ -59,14 +63,14 @@ def add_user():
 def get_all_products():
     products_object = ProductsDb()
     products = products_object.read()
-    return render_template("products.html", products=products, user=session.get("user", False))
+    return render_template("products.html", products=products, user=session.get("user", True))
 
 
 @app.route('/products/<int:product_id>', methods=['GET'])
 def get_product_by_id(product_id):
     products_object = ProductsDb()
     products = products_object.read(id=product_id)
-    return render_template("product_zoom.html", products=products[0], user=session.get("user", False))
+    return render_template("product_zoom.html", products=products[0], user=session.get("user", True))
 
 
 @app.route('/products/<category>', methods=['GET'])
