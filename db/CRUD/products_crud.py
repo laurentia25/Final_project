@@ -47,9 +47,7 @@ class ProductsDb(CrudABC):
             cursor.execute(sql_query)
         else:
             cursor.execute(sql_query, (value,))
-
         products = cursor.fetchall()
-
         products_json = []
         for product in products:
             products_json.append(
