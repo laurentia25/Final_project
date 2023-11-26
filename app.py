@@ -23,7 +23,7 @@ def login():
     if request.method == "GET":
         return render_template("login.html")
     # logica asociata cu metoda POST, nu e nevoie de else
-    user_data = dict(request.form) # -> dictionar cu info din form
+    user_data = dict(request.form)  # -> dictionar cu info din form
     # user_obj = User(email=user_data['email'], password=user_data['password'])
     try:
         user_obj = User(**user_data)
@@ -33,12 +33,22 @@ def login():
     return redirect('/products')
 
 
-@app.route('/add_to_cart', methods=['POST'])
+@app.route('/add_to_cart', methods=['GET', 'POST'])
 def add_to_cart():
+    if request.method == "GET":
+        return render_template("cart.html")
     product_id = request.form.get('product_id')
+    clear_cart_pressed = 'clear_cart' in request.form
     prod_buy = Cart()
+    if clear_cart_pressed:
+        clear_cart = prod_buy.clear_cart()
+    else:
+        clear_cart = False
     products_in_cart = prod_buy.add_to_cart(product_id)
-    return render_template('cart.html', products_in_cart=products_in_cart, user=session.get("user", True))
+    return render_template('cart.html',
+                           products_in_cart=products_in_cart,
+                           clear_cart=clear_cart,
+                           user=session.get("user", True))
 
 
 # @app.route("/users", methods=['GET'])

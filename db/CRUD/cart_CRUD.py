@@ -2,14 +2,13 @@ from db.CRUD.products_crud import ProductsDb
 
 
 class Cart(ProductsDb):
+    products_json = []
 
     def add_to_cart(self, product_id):
-        products_to_cart = []
+        products_in_cart = []
         if product_id:
-            products_to_cart.append(product_id)
-            products_json = []
-            print(products_to_cart)
-            for product in products_to_cart:
+            products_in_cart.append(product_id)
+            for product in products_in_cart:
                 sql_query = "SELECT * FROM Products WHERE id=?;"
                 cursor = self.connection.cursor()
                 cursor.execute(sql_query, (product, ))
@@ -21,9 +20,18 @@ class Cart(ProductsDb):
                          "price": product_to_cart[2],
                          "image": product_to_cart[6]
                           }
-                    products_json.append(product_json)
-            print(products_json)
-            return products_json
+                    self.products_json.append(product_json)
+                print(products_in_cart)
+                return self.products_json
+
+    def clear_cart(self):
+        self.products_json.clear()
+        return self.products_json
+
+    def delete_cart_product(self, prod_id):
+        self.products_json.remove(prod_id)
+        return self.products_json
+
 
     def create(self):
         pass
