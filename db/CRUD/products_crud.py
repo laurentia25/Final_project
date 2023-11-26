@@ -46,7 +46,6 @@ class ProductsDb(CrudABC):
         if not value:
             cursor.execute(sql_query)
         else:
-            print("SQL Query:", sql_query)
             cursor.execute(sql_query, (value,))
 
         products = cursor.fetchall()
