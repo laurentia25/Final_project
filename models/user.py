@@ -12,11 +12,11 @@ class User:
             user_id=None,
             confirm_password=None
     ):
-        self.email = email
-        self.password = password
-        self.username = username
-        self.user_id = user_id
-        self.confirm_password = confirm_password
+        self._email = email
+        self.__password = password
+        self._username = username
+        self._user_id = user_id
+        self.__confirm_password = confirm_password
         self.user_db = UsersDb()
 
     def validate_input_request(self):
@@ -32,7 +32,7 @@ class User:
         self.check_passwords()
 
     def check_fields(self):
-        if not self.email or not self.password or not self.username or not self.confirm_password:
+        if not self._email or not self.__password or not self._username or not self.__confirm_password:
             raise Exception("Nu ați completat toate câmpurile!")
 
     def validate_username(self):
@@ -41,7 +41,7 @@ class User:
         invalid_chars = "!#$%^&*()+=`~/?<>,\\|\"\'|țșăîâÂÎȚȘĂ"
         """
         invalid_chars = "!#$%^&*()+=`~/?<>,\\|\"\'|țșăîâÂÎȚȘĂ"
-        for char in self.username:
+        for char in self._username:
             if char in invalid_chars:
                 raise Exception("Username-ul nu trebuie sa contina caractere invalide!")
 
@@ -53,45 +53,44 @@ class User:
         special_chars = "!@#$%^&*()-=_+[]{}|;':\"<>,./?\\"
         """
         special_chars = "!@#$%^&*()-=_+[]{}|;':\"<>,./?\\"
-        if len(self.password) < 8:
+        if len(self.__password) < 8:
             raise Exception("Parola trebuie sa aibă minim 8 caractere!")
-        for character in self.password:
+        for character in self.__password:
             character.isupper()
             break
         else:
             raise Exception("Parola trebuie sa aibă cel putin o litera mare!")
-        for char in self.password:
+        for char in self.__password:
             if char in special_chars:
                 break
         else:
             raise Exception("Parola trebuie sa aibă cel putin un caracter special (-, /, ?, @ etc)")
 
     def check_passwords(self):
-        if self.password != self.confirm_password:
+        if self.__password != self.__confirm_password:
             raise Exception("Parolele nu coincid")
 
     def formatting_input(self):
         return {
             'id': str(uuid.uuid4()),
-            'username': self.username,
-            'password': self.password,
-            'email': self.email}
+            'username': self._username,
+            'password': self.__password,
+            'email': self._email}
 
     def add(self):
         self.validate_input_request()
-        get_by_username = self.user_db.read(username=self.username)
-        get_by_email = self.user_db.read(email=self.email)
+        get_by_username = self.user_db.read(username=self._username)
+        get_by_email = self.user_db.read(email=self._email)
         if get_by_email or get_by_username:
             raise Exception("Username-ul sau email-ul exista deja in baza de date!")
         self.user_db.create(self.formatting_input())
 
     def check_in_db(self):
-        users = self.user_db.read(email=self.email)
+        users = self.user_db.read(email=self._email)
         if not users:
             raise Exception("Nu sunteți înregistrat cu acest email!")
         user = users[0]
-        if user["password"] != self.password:
+        if user["password"] != self.__password:
             raise Exception("Parolă invalidă!")
         return True
-
 
