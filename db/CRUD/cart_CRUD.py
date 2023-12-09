@@ -32,7 +32,6 @@ class Cart(ProductsDb):
         self.products_json.remove(prod_id)
         return self.products_json
 
-
     def create(self):
         pass
 
